@@ -1,0 +1,10 @@
+@media (max-width:767px) {
+    .subscrib .form-control {
+        margin: 20px auto;
+        width: 400px;
+    }
+    .navbar-fixed-top .navbar-collapse,
+    .navbar-fixed-bottom .navbar-collapse {
+        max-height: none;
+    }
+}
