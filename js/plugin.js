@@ -26,3 +26,4 @@ $(document).ready(function() {
 $(window).load(function() {
     $('.loading, .loading .sk-chase').fadeOut(2000);
 });
+window.document.title = 'The Eagle'
