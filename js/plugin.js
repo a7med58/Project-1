@@ -1,3 +1,14 @@
+let section = document.querySelector(".our-skill")
+let spans = document.querySelectorAll(".prg span")
+window.onscroll = function() {
+    if (window.scrollY >= section.offsetTop - 200) {
+        console.log("Reach");
+        spans.forEach((span) => {
+            span.style.width = span.dataset.width;
+        });
+    }
+
+};
 $(".change-color").click(function() {
     $(".color-option").fadeToggle();
 });
@@ -27,4 +38,18 @@ $(window).load(function() {
     $('.loading, .loading .sk-chase').fadeOut(2000);
 });
 window.document.title = 'The Eagle'
-window.alert = 'Hallo Please Visite By Google Chrome'
+var textarea = document.getElementById('text_area'),
+    count = document.getElementById('count'),
+    txt_maxlength = textarea.getAttribute('maxlength');
+
+textarea.oninput = function() {
+    'use strict';
+    count.textContent = txt_maxlength - this.value.length;
+
+    if (count.textContent == 0) {
+        count.classList.add('zero');
+    } else {
+        count.classList.remove('zero');
+    }
+
+}
