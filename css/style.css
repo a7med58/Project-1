@@ -1,3 +1,128 @@
+/* Start Settings Box */
+
+:root {
+    --main-color: #E41B17;
+}
+
+.settings-box {
+    position: fixed;
+    padding-top: 50px;
+    left: -200px;
+    top: 0;
+    background-color: transparent;
+    width: 200px;
+    z-index: 1000;
+    height: 100px;
+    transition: .3s;
+}
+
+.settings-box.open {
+    left: 0;
+}
+
+.settings-box .toggle-settings {
+    position: absolute;
+    right: -30px;
+    top: 100px;
+    background-color: var(--main-color);
+    text-align: center;
+    cursor: pointer;
+}
+
+.settings-box .toggle-settings .fa-cogs {
+    width: 30px;
+    padding: 8px 0;
+}
+
+.settings-box .option-box {
+    padding: 10px;
+    text-align: center;
+    background-color: #EEE;
+    margin: 10px;
+}
+
+.settings-box .option-box h4 {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.settings-box .option-box .colors-list {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.settings-box .option-box .colors-list li {
+    width: 24px;
+    height: 24px;
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    border: 3px solid #EEE;
+}
+
+.settings-box .option-box .colors-list li.active {
+    border-color: #FFF;
+}
+
+.settings-box .option-box .colors-list li:first-child {
+    background-color: #FF9800;
+}
+
+.settings-box .option-box .colors-list li:nth-child(2) {
+    background-color: #E91E63;
+}
+
+.settings-box .option-box .colors-list li:nth-child(3) {
+    background-color: #009688;
+}
+
+.settings-box .option-box .colors-list li:nth-child(4) {
+    background-color: #03A9F4;
+}
+
+.settings-box .option-box .colors-list li:nth-child(5) {
+    background-color: #4CAF50;
+}
+
+.settings-box .option-box .yes,
+.settings-box .option-box .no {
+    width: 50px;
+    background-color: var(--main-color);
+    color: #FFF;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 12px;
+    padding: 4px 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.settings-box .option-box span.active {
+    opacity: 1;
+}
+
+.settings-box .reset-options {
+    background-color: #F44336;
+    border: none;
+    width: 178px;
+    margin: 10px auto;
+    display: block;
+    color: #FFF;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* End Settings Box */
+
 .prg {
     position: relative;
     width: 500px;
@@ -20,48 +145,12 @@
     left: 0;
     top: 0;
     height: 100%;
-    background-color: indianred;
+    background-color: var(--main-color);
     transition: width 0.3s linear;
     -webkit-transition: width 0.3s linear;
     -moz-transition: width 0.3s linear;
     -ms-transition: width 0.3s linear;
     -o-transition: width 0.3s linear;
-}
-
-.option-box {
-    position: fixed;
-    top: 100px;
-    left: 0px;
-    z-index: 9999;
-}
-
-.brandeag {
-    color: #E41B17;
-}
-
-.option-box .color-option {
-    float: left;
-    background: #333;
-    color: #fff;
-    padding: 10px;
-    width: 200px;
-    border: 4px solid #E41B17;
-    display: none;
-}
-
-.option-box .color-option ul li {
-    width: 20px;
-    height: 20px;
-    background: #f00;
-    display: inline-block;
-    margin-right: 3px;
-}
-
-.option-box .change-color {
-    padding: 5px;
-    background-color: #E41B17;
-    color: #fff;
-    cursor: pointer;
 }
 
 .navbar-brand {
@@ -70,7 +159,7 @@
     padding: 15px 15px;
     font-size: 25px;
     line-height: 20px;
-    color: #E41B17;
+    color: var(--main-color);
 }
 
 .navbar-brand:hover,
@@ -90,7 +179,7 @@
 }
 
 .about h1 span {
-    color: #E41B17;
+    color: var(--main-color);
 }
 
 .clock {
@@ -98,7 +187,7 @@
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    color: #337ab7;
+    color: var(--main-color);
     font-size: 25px;
     font-family: var(--main-font-family), Arial, sans-serif;
     font-weight: 700;
@@ -208,7 +297,7 @@
 .testimonial span {
     font-size: 18px;
     font-weight: bold;
-    color: #E41B17;
+    color: var(--main-color);
 }
 
 .testimonial .carousel-inner {
@@ -229,8 +318,8 @@
     margin: 1px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #000;
-    background-color: #E41B17;
+    background-color: var(--main-color);
+    background-color: var(--main-color);
     border: 1px solid rgb(20, 16, 241);
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -341,7 +430,7 @@
 }
 
 .loading {
-    background-color: #E41B17;
+    background-color: var(--main-color);
     color: #fff;
     position: fixed;
     left: 0;
@@ -487,7 +576,7 @@
     z-index: 100;
     display: none;
     text-decoration: none;
-    color: #808080;
+    color: var(--main-color);
     cursor: pointer;
 }
 
@@ -605,7 +694,7 @@
 }
 
 .zero {
-    color: red;
+    color: var(--main-color);
     font-weight: bold
 }
 
@@ -626,7 +715,7 @@
 .depart img {
     opacity: 0.4;
     filter: alpha(opacity=40);
-    -webkit-filter: ;
+    -webkit-filter: alpha(opacity=40);
     margin-top: 20px;
     margin-bottom: 20px;
 }

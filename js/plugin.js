@@ -118,3 +118,64 @@ var countdown = setInterval(function() {
     document.getElementById("minutes").children[0].innerText = minutes;
     document.getElementById("seconds").children[0].innerText = seconds;
 }, 1000);
+
+
+// Check If There's Local Storage Color Option
+let mainColors = localStorage.getItem("color_option");
+
+// If There's Color Item In Local Storage
+if (mainColors !== null) {
+
+    // console.log('Local Storage Is Not Empty You Can Set It On Root Now');
+    // console.log(localStorage.getItem("color_option"));
+
+    document.documentElement.style.setProperty('--main-color', mainColors);
+
+    // Remove Active Class From All Colors List Item
+    document.querySelectorAll(".colors-list li").forEach(element => {
+
+        element.classList.remove("active");
+
+        // Add Active Class On Element With Data-Color === Local Storage Item
+        if (element.dataset.color === mainColors) {
+
+            // Add Active Class
+            element.classList.add("active");
+
+        }
+
+    });
+
+}
+
+// Click On Toggle Settings Gear
+document.querySelector(".toggle-settings .fa-cogs").onclick = function() {
+
+    // Toggle Class Fa-spin For Rotation on Self
+    this.classList.toggle("fa-spin");
+
+    // Toggle Class Open On Main Settings Box
+    document.querySelector(".settings-box").classList.toggle("open");
+
+};
+
+// Switch Colors
+const colorsLi = document.querySelectorAll(".colors-list li");
+
+// Loop On All List Items
+colorsLi.forEach(li => {
+
+    // Click On Every List Items
+    li.addEventListener("click", (e) => {
+
+        // Set Color On Root
+        document.documentElement.style.setProperty('--main-color', e.target.dataset.color);
+
+        // Set Color On Local Storage
+        localStorage.setItem("color_option", e.target.dataset.color);
+
+        handleActive(e);
+
+    });
+
+});
