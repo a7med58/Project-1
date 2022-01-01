@@ -483,7 +483,7 @@
 }
 
 .price-table {
-    background-color: #eee;
+    background-color: #1b6d85;
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -683,7 +683,7 @@
 /* Start Gallery */
 
 .cert {
-    background-color: #eee;
+    background-color: #1b6d85;
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -823,7 +823,7 @@
 }
 
 .depart {
-    background: white;
+    background: #1b6d85;
     padding-top: 30px;
     padding-bottom: 30px;
 }

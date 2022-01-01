@@ -26,6 +26,22 @@ $(window).load(function() {
     $('.loading, .loading .sk-chase').fadeOut(2000);
 });
 
+// Handle Active State
+function handleActive(ev) {
+
+    // Remove Active Class From All Childrens
+    ev.target.parentElement.querySelectorAll(".active").forEach(element => {
+
+        element.classList.remove("active");
+
+    });
+
+    // Add Active Class On Self
+    ev.target.classList.add("active");
+
+}
+
+
 
 
 // Switch Colors
@@ -123,6 +139,18 @@ if (mainColors !== null) {
     });
 
 }
+
+document.querySelector(".reset-options").onclick = function() {
+
+    // localStorage.clear();
+    localStorage.removeItem("color_option");
+    localStorage.removeItem("background_option");
+    localStorage.removeItem("bullets_option");
+
+    // Reload Window
+    window.location.reload();
+
+};
 
 
 
