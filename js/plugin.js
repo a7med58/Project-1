@@ -89,7 +89,7 @@ textarea.oninput = function() {
 
     }
     // Set the date we're counting down to
-var countDownDate = new Date("Dec 31, 2021 12:00:00").getTime(); // CHANGE DATE AND TIME HERE
+var countDownDate = new Date("Jan 6, 2022 12:00:00").getTime(); // CHANGE DATE AND TIME HERE
 
 // Update the count down every 1 second
 var countdown = setInterval(function() {
