@@ -1,52 +1,5 @@
-let section = document.querySelector(".our-skill")
-let spans = document.querySelectorAll(".prg span")
-window.onscroll = function() {
-    if (window.scrollY >= section.offsetTop - 200) {
-        console.log("Reach");
-        spans.forEach((span) => {
-            span.style.width = span.dataset.width;
-        });
-    }
-
-};
-
-
-function showTime() {
-    var date = new Date();
-    var h = date.getHours(); // 0 - 23
-    var m = date.getMinutes(); // 0 - 59
-    var s = date.getSeconds(); // 0 - 59
-    var session = "AM";
-
-    if (h == 0) {
-        h = 12;
-    }
-
-    if (h > 12) {
-        h = h - 12;
-        session = "PM";
-    }
-
-    h = (h < 10) ? "0" + h : h;
-    m = (m < 10) ? "0" + m : m;
-    s = (s < 10) ? "0" + s : s;
-
-    var time = h + ":" + m + ":" + s + " " + session;
-    document.getElementById("MyClockDisplay").innerText = time;
-    document.getElementById("MyClockDisplay").textContent = time;
-
-    setTimeout(showTime, 1000);
-
-}
-
-showTime();
-
-
-
-
-$(".change-color").click(function() {
-    $(".color-option").fadeToggle();
-});
+window.document.title = 'The Eagle'
+window.document.title = 'The Eagle'
 
 $('html').niceScroll();
 
@@ -72,23 +25,46 @@ $(document).ready(function() {
 $(window).load(function() {
     $('.loading, .loading .sk-chase').fadeOut(2000);
 });
-window.document.title = 'The Eagle'
-var textarea = document.getElementById('text_area'),
-    count = document.getElementById('count'),
-    txt_maxlength = textarea.getAttribute('maxlength');
 
-textarea.oninput = function() {
-        'use strict';
-        count.textContent = txt_maxlength - this.value.length;
 
-        if (count.textContent == 0) {
-            count.classList.add('zero');
-        } else {
-            count.classList.remove('zero');
-        }
 
-    }
-    // Set the date we're counting down to
+// Switch Colors
+const colorsLi = document.querySelectorAll(".colors-list li");
+
+// Loop On All List Items
+colorsLi.forEach(li => {
+
+    // Click On Every List Items
+    li.addEventListener("click", (e) => {
+
+        // Set Color On Root
+        document.documentElement.style.setProperty('--main-color', e.target.dataset.color);
+
+        // Set Color On Local Storage
+        localStorage.setItem("color_option", e.target.dataset.color);
+
+        handleActive(e);
+
+    });
+
+});
+// Click On Toggle Settings Gear
+document.querySelector(".toggle-settings .fa-cogs").onclick = function() {
+
+    // Toggle Class Fa-spin For Rotation on Self
+    this.classList.toggle("fa-spin");
+
+    // Toggle Class Open On Main Settings Box
+    document.querySelector(".settings-box").classList.toggle("open");
+
+};
+
+
+$(".change-color").click(function() {
+    $(".color-option").fadeToggle();
+});
+
+// Set the date we're counting down to
 var countDownDate = new Date("Jan 6, 2022 12:00:00").getTime(); // CHANGE DATE AND TIME HERE
 
 // Update the count down every 1 second
@@ -148,34 +124,147 @@ if (mainColors !== null) {
 
 }
 
-// Click On Toggle Settings Gear
-document.querySelector(".toggle-settings .fa-cogs").onclick = function() {
 
-    // Toggle Class Fa-spin For Rotation on Self
-    this.classList.toggle("fa-spin");
 
-    // Toggle Class Open On Main Settings Box
-    document.querySelector(".settings-box").classList.toggle("open");
+function showTime() {
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+
+    if (h == 0) {
+        h = 12;
+    }
+
+    if (h > 12) {
+        h = h - 12;
+        session = "PM";
+    }
+
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+
+    setTimeout(showTime, 1000);
+
+}
+
+showTime();
+
+
+let section = document.querySelector(".our-skill")
+let spans = document.querySelectorAll(".prg span")
+window.onscroll = function() {
+    if (window.scrollY >= section.offsetTop - 200) {
+        console.log("Reach");
+        spans.forEach((span) => {
+            span.style.width = span.dataset.width;
+        });
+    }
 
 };
 
-// Switch Colors
-const colorsLi = document.querySelectorAll(".colors-list li");
+// Create Popup With The Image
+let ourGallery = document.querySelectorAll(".gallery img");
 
-// Loop On All List Items
-colorsLi.forEach(li => {
+ourGallery.forEach(img => {
 
-    // Click On Every List Items
-    li.addEventListener("click", (e) => {
+    img.addEventListener('click', (e) => {
 
-        // Set Color On Root
-        document.documentElement.style.setProperty('--main-color', e.target.dataset.color);
+        // Create Overlay Element
+        let overlay = document.createElement("div");
 
-        // Set Color On Local Storage
-        localStorage.setItem("color_option", e.target.dataset.color);
+        // Add Class To Overlay
+        overlay.className = 'popup-overlay';
 
-        handleActive(e);
+        // Append Overlay To The Body
+        document.body.appendChild(overlay);
+
+        // Create The Popup Box
+        let popupBox = document.createElement("div");
+
+        // Add Class To The Popup Box
+        popupBox.className = 'popup-box';
+
+        if (img.alt !== null) {
+
+            // Create Heading
+            let imgHeading = document.createElement("h3");
+
+            // Create text For Heading
+            let imgText = document.createTextNode(img.alt);
+
+            // Append The Text To The Heading
+            imgHeading.appendChild(imgText);
+
+            // Append The Heading To The Popup Box
+            popupBox.appendChild(imgHeading);
+
+        }
+
+        // Create The Image
+        let popupImage = document.createElement("img");
+
+        // Set Image Source
+        popupImage.src = img.src;
+
+        // Add Image To Popup Box
+        popupBox.appendChild(popupImage);
+
+        // Append The Popup Box To Body
+        document.body.appendChild(popupBox);
+
+        // Create The Close Span
+        let closeButton = document.createElement("span");
+
+        // Create The Close Button Text
+        let closeButtonText = document.createTextNode("X");
+
+        // Append Text To Close Button
+        closeButton.appendChild(closeButtonText);
+
+        // Add Class To Close Button
+        closeButton.className = 'close-button';
+
+        // Add Close Button To The Popup Box
+        popupBox.appendChild(closeButton);
 
     });
 
 });
+
+// Close Popup
+document.addEventListener("click", function(e) {
+
+    if (e.target.className == 'close-button') {
+
+        // Remove The Current Popup
+        e.target.parentNode.remove();
+
+        // Remove Overlay
+        document.querySelector(".popup-overlay").remove();
+
+    }
+
+});
+
+
+var textarea = document.getElementById('text_area'),
+    count = document.getElementById('count'),
+    txt_maxlength = textarea.getAttribute('maxlength');
+textarea.oninput = function() {
+    'use strict';
+    count.textContent = txt_maxlength - this.value.length;
+
+    if (count.textContent == 0) {
+        count.classList.add('zero');
+    } else {
+        count.classList.remove('zero');
+    }
+
+}
