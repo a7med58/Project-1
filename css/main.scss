@@ -757,7 +757,10 @@
     padding-top: 20px;
     padding-bottom: 20px;
     a {
-        color: var(--main-color);
+        <<<<<<< HEAD color: var(--main-color);
+        =======<<<<<<< HEAD color: var(--main-color);
+        =======color: #337ab7;
+        >>>>>>>c5938774a6cc940b7ae764e34083d65a2c692aa4>>>>>>>9ca472384e10f346bf0a4a209d309d72b882bcb3
     }
     a:hover {
         color: #fff;
@@ -768,8 +771,13 @@
     text-align: center;
     padding-top: 25px;
     font-size: 18px;
-    font-family: var(--main-font-family);
+    <<<<<<< HEAD font-family: var(--main-font-family);
     color: var(--main-color);
+    =======<<<<<<< HEAD font-family: var(--main-font-family);
+    color: var(--main-color);
+    =======font-family: var(--main-font-family), Arial, sans-serif;
+    color: #337ab7;
+    >>>>>>>c5938774a6cc940b7ae764e34083d65a2c692aa4>>>>>>>9ca472384e10f346bf0a4a209d309d72b882bcb3
 }
 
 .panel .panel-heading a:after {
