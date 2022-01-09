@@ -1,0 +1,420 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  include incl/all-css.pug
+section.option-box
+  .settings-box
+    .toggle-settings
+      i.fas.fa-cogs
+    .settings-container
+      .option-box
+        h4 Colors
+        ul.colors-list
+          li.active(data-color='#FF9800')
+          li(data-color='#E91E63')
+          li(data-color='#009688')
+          li(data-color='#03A9F4')
+          li(data-color='#4CAF50')
+      button.reset-options Reset Options
+nav.navbar.navbar-default.navbar-fixed-top
+  .container
+    // Brand and toggle get grouped for better mobile display
+    .navbar-header
+      button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand.hvr-float(href='#')
+        | The 
+        span.brandeag.hvr-grow-rotate Eagle
+    // Collect the nav links, forms, and other content for toggling
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        li.active
+          a(href='index.html')
+            | Home 
+            span.sr-only (current)
+        li
+          a(href='about.html') About
+        li
+          a(href='faq.html') FAQ
+        li
+          a(href='#price-table') My Service
+        li
+          a(href='#team') Team
+        li
+          a(href='#static') Static
+        li
+          a(href='#skills') Skills
+        li
+          a(href='#cert') Certification
+        li
+          a(href='#contact') Contact Us
+        li
+          a(href='#sponser') Sponser
+        li.dropdown
+          a.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false')
+            | Category 
+            span.caret
+          ul.dropdown-menu
+            li
+              a(href='#') Security
+            li
+              a(href='#') FrontEnd
+            li
+              a(href='#') Network
+            li.divider(role='separator')
+            li
+              a(href='#') Bussnis Development
+    // /.navbar-collapse
+  // /.container-fluid
+#myslide.carousel.slide(data-ride='carousel')
+  // Indicators
+  ol.carousel-indicators
+    li.active(data-target='#myslide' data-slide-to='0')
+    li(data-target='#myslide' data-slide-to='1')
+    li(data-target='#myslide' data-slide-to='2')
+    li(data-target='#myslide' data-slide-to='3')
+  // Wrapper for slides
+  .carousel-inner(role='listbox')
+    .item.active
+      img(src='./Image/lab2.jpg' alt='...')
+      .carousel-caption
+        p This Lab For Student and Staff
+        .btn.btn-primary Reservation
+        .btn.btn-danger Read More
+    .item
+      img(src='./Image/lab2.jpg' alt='...')
+      .carousel-caption
+        p This Lab For Student and Staff
+        .btn.btn-primary Reservation
+        .btn.btn-danger Read More
+    .item
+      img(src='./Image/lab2.jpg' alt='...')
+      .carousel-caption
+        p This Lab For Student and Staff
+        .btn.btn-primary Reservation
+        .btn.btn-danger Read More
+    .item
+      img(src='./Image/lab2.jpg' alt='...')
+      .carousel-caption
+        p This Lab For Student and Staff
+        .btn.btn-primary Reservation
+        .btn.btn-danger Read More
+  // Controls
+  a.left.carousel-control(href='#myslide' role='button' data-slide='prev')
+    span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+    span.sr-only Previous
+  a.right.carousel-control(href='#myslide' role='button' data-slide='next')
+    span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+    span.sr-only Next
+section.about.text-center
+  .container
+    h1
+      | About 
+      span The Eagle
+    p.lead
+      | CV In This 
+      strong Link
+    #MyClockDisplay.clock(onload='showTime()')
+    .countdown
+      .containermery
+        h1.animatedmer Merry Christmas
+        p
+          img(src='https://i.ibb.co/8D6XK4m/logo.png' alt='Traversy Media')
+      #timer
+        #days.board
+          .number
+          .labels Days
+        #hours.board
+          .number
+          .labels Hours
+        #minutes.board
+          .number
+          .labels Minutes
+        #seconds.board
+          .number
+          .labels Seconds
+section.Feature.text-center
+  .continer
+    h1 My Filed
+    .row
+      .col-lg-3.col-md-6
+        .feat
+          span.glyphicon.glyphicon-plus(aria-hidden='true')
+          h3 Security
+          p Design Security System By The Team
+      .col-lg-3.col-md-6
+        .feat
+          span.glyphicon.glyphicon-globe(aria-hidden='true')
+          h3 Web Development
+          p Design Web Site &amp; Application By The Team
+      .col-lg-3.col-md-6
+        .feat
+          span.glyphicon.glyphicon-ok-sign(aria-hidden='true')
+          h3 Network
+          p Design Network By The Team
+      .col-lg-3.col-md-6
+        .feat
+          span.glyphicon.glyphicon-thumbs-up(aria-hidden='true')
+          h3 Bussnis Development
+          p Bussnis By The Team
+section.testimonial.text-center
+  .continer
+    h1 Whats Youre Opinion In My Artical?
+    #c-testimonial.carousel.slide(data-ride='carousel')
+      .carousel-inner(role='listbox')
+        .item.active
+          p.lead Opinion 1
+          span Omar
+        .item
+          p.lead Opinion 2
+          span Ezz
+        .item
+          p.lead Opinion 3
+          span Sara
+        .item
+          p.lead Opinion 4
+          span Lamar
+      // Controls
+      a.left.carousel-control(href='#c-testimonial' role='button' data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+        span.sr-only Previous
+      a.right.carousel-control(href='#c-testimonial' role='button' data-slide='next')
+        span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+        span.sr-only Next
+      ol.carousel-indicators
+        li.active(data-target='#c-testimonial' data-slide-to='0')
+        li(data-target='#c-testimonial' data-slide-to='1')
+        li(data-target='#c-testimonial' data-slide-to='2')
+        li(data-target='#c-testimonial' data-slide-to='3')
+section#price-table.price-table.text-center
+  .container
+    h1 Service Price Plan
+    .row
+      .col-md-3.col-sm-6.col-xs-12
+        .price-box.wow.fadeInUp.text-center(data-wow-duration='2s' data-wow-offset='400')
+          h3.text-primary Security Plan
+          p.center-block 250$
+          ul.list-unstyled
+            li SLA
+            li QOS
+            li HA
+          a.btn.btn-primary(href='#') Order
+      .col-md-3.col-sm-6.col-xs-12
+        .price-box.wow.fadeInDown.text-center(data-wow-duration='2s' data-wow-offset='400')
+          h3.text-success Network Plan
+          p.center-block 250$
+          ul.list-unstyled
+            li SLA
+            li QOS
+            li HA
+          a.btn.btn-default(href='#') Order
+      .col-md-3.col-sm-6.col-xs-12
+        .price-box.wow.fadeInUp.text-center(data-wow-duration='2s' data-wow-offset='400')
+          h3.text-info Web Development Plan
+          p.center-block 250$
+          ul.list-unstyled
+            li SLA
+            li QOS
+            li HA
+          a.btn.btn-info(href='#') Order
+      .col-md-3.col-sm-6.col-xs-12
+        .price-box.wow.fadeInDown.text-center(data-wow-duration='2s' data-wow-offset='400')
+          h3.text-danger Bussnis Development Plan
+          p.center-block 250$
+          ul.list-unstyled
+            li SLA
+            li QOS
+            li HA
+          a.btn.btn-danger(href='#') Order
+section#team.team.text-center
+  .o-team
+    .container
+      h1 Team Of Company
+      .row
+        .col-lg-3.col-sm-6
+          .persone
+            img.img-circle(src='image/P1.jpg' alt='')
+            h2 Eng.Ahmed Ragab
+            p IT Manger
+            i.fab.fa-facebook-square.fa-3x
+            i.fab.fa-github-square.fa-3x
+            i.fab.fa-linkedin.fa-3x
+        .col-lg-3.col-sm-6
+          .persone
+            img.img-circle(src='image/P1.jpg' alt='')
+            h2 Eng.Ahmed
+            p Network Eng
+            i.fab.fa-facebook-square.fa-3x
+            i.fab.fa-github-square.fa-3x
+            i.fab.fa-linkedin.fa-3x
+        .col-lg-3.col-sm-6
+          .persone
+            img.img-circle(src='image/P1.jpg' alt='')
+            h2 Eng.Sameh Mostaf
+            p Help Desk
+            i.fab.fa-facebook-square.fa-3x
+            i.fab.fa-github-square.fa-3x
+            i.fab.fa-linkedin.fa-3x
+        .col-lg-3.col-sm-6
+          .persone
+            img.img-circle(src='image/P1.jpg' alt='')
+            h2 Eng.Ali Fargly
+            p Secrtria
+            i.fab.fa-facebook-square.fa-3x
+            i.fab.fa-github-square.fa-3x
+            i.fab.fa-linkedin.fa-3x
+section.subscrib.wow.slideOutLeft.text-center(data-wow-offset='2' data-wow-iteration='2')
+  .container
+    h1 SubScrib
+    p.lead Type Youer Mail For Follwing 
+    form.form-inline
+      input.form-control(type='text' placeholder='Your Mail')
+      button.btn.btn-primary
+        i.fas.fa-edit
+        | SubScrib
+section#static.static.wow.slideInLeft.text-center(data-wow-duration='2s')
+  .data
+    .container
+      h1 Static Web Site
+      .col-lg-6.col-sm-12
+        .stats
+          i.fad.fa-video-plus.fa-6x
+          p 150
+          span Video
+      .col-lg-6.col-sm-12
+        .stats
+          i.far.fa-newspaper.fa-6x
+          p 45
+          span Artical
+section#skills.our-skill.text-center
+  .container
+    .row
+      h1 Team Skills
+      .col-md-5
+        .skill-prog.wow.slideInLeft
+          h3 Security
+          .prg
+            span(style='width: 0' data-width='90%')
+          h3 Network
+          .prg
+            span(style='width: 0' data-width='80%')
+          h3 Web Development
+          .prg
+            span(style='width: 0' data-width='75%')
+          h3 Bussnis 
+          .prg
+            span(style='width: 0' data-width='75%')
+      .col-md-6.col-lg-offset-1
+        .team-info
+          h4 TL: Ahmed Ragab
+        .team-info
+          h4 TL: AHmed Roshdy
+        .team-info
+          h4 TL: Ahmed Ragab
+        .team-info
+          h4 TL: Sameh Mostafa
+section#cert.cert
+  .gallery
+    .container
+      h2 My Certification
+      .images-box
+        img(src='image/cert/Computer Network Fundamentals_page-0001.jpg' alt='Network Fundmintal')
+        img(src='image/cert/CCNA-Arabic.jpg' alt='CCNA')
+        img(src='image/cert/CCNP-R-1.jpg' alt='CCNP Router')
+        img(src='image/cert/CCNP-Switch.jpg' alt='CCNP Switch')
+        img(src='image/cert/MCSA.jpg' alt='MCSA')
+        img(src='image/cert/VCE.jpg' alt='VCE')
+        img(src='image/cert/udicity-chaleng-track-1.jpg' alt='Frontend')
+        img(src='image/cert/TypeScript Fundmintaul.jpg' alt='Type Script')
+        img(src='image/cert/DB-Certi.png' alt='Data Base')
+        img(src='image/cert/UX-Certi.png' alt='UX')
+        img(src='image/cert/HTML&CSS.jpg' alt='HTML&CSS')
+        img(src='image/cert/JavaScriptES6and beyond.jpg' alt='Java ES6')
+        img(src='image/cert/Python-Certi.png' alt='Python')
+        img(src='image/cert/Reactjs.jpg' alt='React')
+        img(src='image/cert/Certificate-CSFPC-1.jpg' alt='CSFPS')
+        img(src='image/cert/ISO 27001.jpg' alt='ISO 27001')
+        img(src='image/cert/Introduction to Network Security_page-0001.jpg' alt='Security Fundmentaul')
+        img(src='image/cert/Ethical Hacking_page-0001.jpg' alt='Ethical Hacking')
+        img(src='image/cert/Splink-Fundmentaul.jpg' alt='Splunk Fundmentaul')
+        img(src='image/cert/Splunk-Infra.jpg' alt='Splunk Infr')
+        img(src='image/cert/TOEFL.jpg' alt='Toefl')
+        img(src='image/cert/Social-Network-m.jpg' alt='Social Marketing')
+        img(src='image/cert/Google.jpg' alt='Google APPS')
+        img(src='image/cert/PMP.png' alt='PMP')
+        img(src='image/cert/DL-Certi.png' alt='Deep Learrning')
+        img(src='image/cert/edrak.png' alt='Edrak')
+        img(src='image/cert/AGR-ISO.jpg' alt='ISO')
+        img(src='image/cert/AGR.jpg' alt='AGR')
+section#contact.contact-us.text-center
+  .filed
+    .container
+      .row
+        i.fas.fa-id-card-alt.fa-6x
+        h1 Contact Us
+        p.lead Feel Free To Contact Us Anytime
+        form(role='form')
+          .col-md-6
+            .form-group
+              input.form-control.input-lg(type='text')
+              span#fp  User Name 
+            .form-group
+              input.form-control.input-lg(type='text')
+              span#fp  Your Email 
+            .form-group
+              input.form-control.input-lg(type='text')
+              span#fp  Mobile Number 
+          .col-md-6
+            .form-group
+              textarea#text_area.form-control.input-lg(maxlength='300')
+              span#count Write Your Comment Max 300 Alp 
+            button.btn.btn-primary.btn-lg.btn-block(type='button') Contact-Us
+section#sponser.depart.wow.animate__pulse
+  .container
+    .row
+      .list-unstyled
+        li.col-md-2.col-xs-2
+          img.img-responsive.center-block.hvr-grow(src='image/logo.jpeg' alt='Dep1')
+        li.col-md-2.col-xs-2
+          img.img-responsive.center-block.hvr-grow(src='image/logo.jpeg' alt='Dep2')
+        li.col-md-2.col-xs-2
+          img.img-responsive.center-block.hvr-grow(src='image/logo.jpeg' alt='Dep3')
+        li.col-md-2.col-xs-2
+          img.img-responsive.center-block.hvr-grow(src='image/logo.jpeg' alt='Dep4')
+        li.col-md-2.col-xs-2
+          img.img-responsive.center-block.hvr-grow(src='image/logo.jpeg' alt='Dep5')
+        li.col-md-2.col-xs-2
+          img.img-responsive.center-block.hvr-grow(src='image/logo.jpeg' alt='Dep6')
+section.footer.text-center
+  .container
+    .row
+      .col-lg-4
+        i.fas.fa-video
+        a Video
+      .col-lg-4
+        i.far.fa-newspaper
+        a Artical
+      .col-lg-4
+        i.fas.fa-building
+        a Department
+  .copyrigth
+    | CopyRigth &copy; 2021 
+    span  Design By A7med Ragab
+section.loading
+  .sk-chase
+    .sk-chase-dot
+    .sk-chase-dot
+    .sk-chase-dot
+    .sk-chase-dot
+    .sk-chase-dot
+    .sk-chase-dot
+a.backtotop(href='#' style='display: inline;')
+  i.fa.fa-arrow-circle-up
+    include incl/all-js.pug
+
+

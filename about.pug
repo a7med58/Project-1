@@ -1,0 +1,116 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title The Eagle
+  include incl/all-css.pug
+
+section.option-box
+  .settings-box
+    .toggle-settings
+      i.fas.fa-cogs
+    .settings-container
+      .option-box
+        h4 Colors
+        ul.colors-list
+          li.active(data-color='#FF9800')
+          li(data-color='#E91E63')
+          li(data-color='#009688')
+          li(data-color='#03A9F4')
+          li(data-color='#4CAF50')
+      button.reset-options Reset Options
+nav.navbar.navbar-default.navbar-fixed-top
+  .container
+    //- Brand and toggle get grouped for better mobile display
+    .navbar-header
+      button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand.hvr-float(href='#')
+        | The 
+        span.brandeag.hvr-grow-rotate Eagle
+    //- Collect the nav links, forms, and other content for toggling
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        li.active
+          a(href='index.html')
+            | Home 
+            span.sr-only (current)
+        li
+          a(href='about.html') About
+        li
+          a(href='faq.html') FAQ
+        li.dropdown
+          a.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false')
+            | Category 
+            span.caret
+          ul.dropdown-menu
+            li
+              a(href='#') Security
+            li
+              a(href='#') FrontEnd
+            li
+              a(href='#') Network
+            li.divider(role='separator')
+            li
+              a(href='#') Bussnis Development
+    //- /.navbar-collapse
+  //- /.container-fluid
+.holder
+  .container
+    ol.breadcrumb
+      li
+        a(href='index.html') Home
+      li.active Data
+section.about.text-center
+  .container
+    h1 About
+    hr
+    p.lead
+      | Lorem ipsum dolor sit amet consectetur adipisicing elit. At eius nulla quaerat culpa reprehenderit ipsum veritatis dolor ipsam quod ex alias minus, iure quidem sunt dolores! Quis hic totam culpa!
+section.depart.wow.animate__pulse
+  .container
+    .row
+      .list-unstyled
+        li.col-md-2.col-xs-2
+          img.img-responsive.center-block.hvr-grow(src='image/logo.jpeg' alt='Dep1')
+        li.col-md-2.col-xs-2
+          img.img-responsive.center-block.hvr-grow(src='image/logo.jpeg' alt='Dep2')
+        li.col-md-2.col-xs-2
+          img.img-responsive.center-block.hvr-grow(src='image/logo.jpeg' alt='Dep3')
+        li.col-md-2.col-xs-2
+          img.img-responsive.center-block.hvr-grow(src='image/logo.jpeg' alt='Dep4')
+        li.col-md-2.col-xs-2
+          img.img-responsive.center-block.hvr-grow(src='image/logo.jpeg' alt='Dep5')
+        li.col-md-2.col-xs-2
+          img.img-responsive.center-block.hvr-grow(src='image/logo.jpeg' alt='Dep6')
+section.footer.text-center
+  .container
+    .row
+      .col-lg-4
+        i.fas.fa-video
+        a Video
+      .col-lg-4
+        i.far.fa-newspaper
+        a Artical
+      .col-lg-4
+        i.fas.fa-building
+        a Department
+  .copyrigth
+    | CopyRigth &copy; 2021 
+    span  Design By A7med Ragab
+section.loading
+  .sk-chase
+    .sk-chase-dot
+    .sk-chase-dot
+    .sk-chase-dot
+    .sk-chase-dot
+    .sk-chase-dot
+    .sk-chase-dot
+a.backtotop(href='#' style='display: inline;')
+  i.fa.fa-arrow-circle-up
+    include incl/all-js.pug
+

@@ -1,150 +1,109 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>The Eagle</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/media.css">
-    <link rel="stylesheet" href="css/hover.css">
-    <link rel="stylesheet" href="css/animate.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Eagle</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/media.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/animate.css">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/hover.css">
 </head>
-
-<body>
-    <section class="option-box">
-        <div class="color-option">
-            <h3>Color option</h3>
-            <ul class="list-unstyled">
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-        <i class="fal fa-cogs fa-3x change-color"></i>
-    </section>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-                <a class="navbar-brand hvr-float" href="#">The <span class="brandeag hvr-grow-rotate">Eagle</span></a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right ">
-                    <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Security</a></li>
-                            <li><a href="#">FrontEnd</a></li>
-                            <li><a href="#">Network</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Bussnis Development</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-    <div class="holder">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li class="active">Data</li>
-            </ol>
-        </div>
+<section class="option-box">
+  <div class="settings-box">
+    <div class="toggle-settings"><i class="fas fa-cogs"></i></div>
+    <div class="settings-container">
+      <div class="option-box">
+        <h4>Colors</h4>
+        <ul class="colors-list">
+          <li class="active" data-color="#FF9800"></li>
+          <li data-color="#E91E63"></li>
+          <li data-color="#009688"></li>
+          <li data-color="#03A9F4"></li>
+          <li data-color="#4CAF50"></li>
+        </ul>
+      </div>
+      <button class="reset-options">Reset Options</button>
     </div>
-    <section class="about text-center">
-        <div class="container">
-            <h1>About</h1>
-            <hr>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. At eius nulla quaerat culpa reprehenderit ipsum veritatis dolor ipsam quod ex alias minus, iure quidem sunt dolores! Quis hic totam culpa!</p>
-        </div>
-    </section>
-    <section class="depart wow animate__pulse">
-        <div class="container">
-            <div class="row">
-                <div class="list-unstyled">
-                    <li class="col-md-2 col-xs-2">
-                        <img class="img-responsive center-block hvr-grow" src="image/logo.jpeg" alt="Dep1">
-                    </li>
-                    <li class="col-md-2 col-xs-2">
-                        <img class="img-responsive center-block hvr-grow" src="image/logo.jpeg" alt="Dep2">
-                    </li>
-                    <li class="col-md-2 col-xs-2">
-                        <img class="img-responsive center-block hvr-grow" src="image/logo.jpeg" alt="Dep3">
-                    </li>
-                    <li class="col-md-2 col-xs-2">
-                        <img class="img-responsive center-block hvr-grow" src="image/logo.jpeg" alt="Dep4">
-                    </li>
-                    <li class="col-md-2 col-xs-2">
-                        <img class="img-responsive center-block hvr-grow" src="image/logo.jpeg" alt="Dep5">
-                    </li>
-                    <li class="col-md-2 col-xs-2">
-                        <img class="img-responsive center-block hvr-grow" src="image/logo.jpeg" alt="Dep6">
-                    </li>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="footer text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <i class="fas fa-video"></i>
-                    <a>Video</a>
-                </div>
-                <div class="col-lg-4">
-                    <i class="far fa-newspaper"></i>
-                    <a>Artical</a>
-                </div>
-                <div class="col-lg-4">
-                    <i class="fas fa-building"></i>
-                    <a>Department</a>
-                </div>
-            </div>
-        </div>
-        <div class="copyrigth">
-            CopyRigth &copy; 2021 <span> Design By A7med Ragab</span>
-        </div>
-    </section>
-    <section class="loading">
-        <div class="sk-chase">
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-            <div class="sk-chase-dot"></div>
-        </div>
-    </section>
-    <a href="#" class="backtotop" style="display: inline;">
-        <i class="fa fa-arrow-circle-up"></i>
-    </a>
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/jquery.nicescroll.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/plugin.js"></script>
-    <script src="js/wow.js"></script>
-
-
-
-    <script>
-        new WOW().init();
-    </script>
-</body>
-
-</html>
+  </div>
+</section>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand hvr-float" href="#">The <span class="brandeag hvr-grow-rotate">Eagle</span></a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Category <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Security</a></li>
+            <li><a href="#">FrontEnd</a></li>
+            <li><a href="#">Network</a></li>
+            <li class="divider" role="separator"></li>
+            <li><a href="#">Bussnis Development</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="holder">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="index.html">Home</a></li>
+      <li class="active">Data</li>
+    </ol>
+  </div>
+</div>
+<section class="about text-center">
+  <div class="container">
+    <h1>About</h1>
+    <hr>
+    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. At eius nulla quaerat culpa reprehenderit ipsum veritatis dolor ipsam quod ex alias minus, iure quidem sunt dolores! Quis hic totam culpa!</p>
+  </div>
+</section>
+<section class="depart wow animate__pulse">
+  <div class="container">
+    <div class="row">
+      <div class="list-unstyled">
+        <li class="col-md-2 col-xs-2"><img class="img-responsive center-block hvr-grow" src="image/logo.jpeg" alt="Dep1"></li>
+        <li class="col-md-2 col-xs-2"><img class="img-responsive center-block hvr-grow" src="image/logo.jpeg" alt="Dep2"></li>
+        <li class="col-md-2 col-xs-2"><img class="img-responsive center-block hvr-grow" src="image/logo.jpeg" alt="Dep3"></li>
+        <li class="col-md-2 col-xs-2"><img class="img-responsive center-block hvr-grow" src="image/logo.jpeg" alt="Dep4"></li>
+        <li class="col-md-2 col-xs-2"><img class="img-responsive center-block hvr-grow" src="image/logo.jpeg" alt="Dep5"></li>
+        <li class="col-md-2 col-xs-2"><img class="img-responsive center-block hvr-grow" src="image/logo.jpeg" alt="Dep6"></li>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="footer text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4"><i class="fas fa-video"></i><a>Video</a></div>
+      <div class="col-lg-4"><i class="far fa-newspaper"></i><a>Artical</a></div>
+      <div class="col-lg-4"><i class="fas fa-building"></i><a>Department</a></div>
+    </div>
+  </div>
+  <div class="copyrigth">CopyRigth &copy; 2021 <span> Design By A7med Ragab</span></div>
+</section>
+<section class="loading">
+  <div class="sk-chase">
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+    <div class="sk-chase-dot"></div>
+  </div>
+</section><a class="backtotop" href="#" style="display: inline;"><i class="fa fa-arrow-circle-up">
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/jquery.nicescroll.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/plugin.js"></script>
+    <script src="../js/wow.js"></script>
+    <script>new WOW().init();</script></i></a>
