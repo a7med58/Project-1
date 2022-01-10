@@ -81,7 +81,7 @@ $(".change-color").click(function() {
 });
 
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 6, 2022 12:00:00").getTime(); // CHANGE DATE AND TIME HERE
+var countDownDate = new Date("Apr 2, 2022 12:00:00").getTime(); // CHANGE DATE AND TIME HERE
 
 // Update the count down every 1 second
 var countdown = setInterval(function() {
