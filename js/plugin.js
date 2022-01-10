@@ -1,5 +1,4 @@
 window.document.title = 'The Eagle'
-window.document.title = 'The Eagle'
 
 $('html').niceScroll();
 
